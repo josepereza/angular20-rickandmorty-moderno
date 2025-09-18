@@ -9,7 +9,7 @@ export const routes: Routes = [
     path: 'detail/:id',
     loadComponent: () => import('./pages/detail/detail'),
     /* Angular 18+ permite convertir parámetros en inputs automáticamente */
-    data: { resolve: { id: (route: any) => +route.paramMap.get('id') } }
+    //data: { resolve: { id: (route: any) => +route.paramMap.get('id') } }
   },
   { path: '**', redirectTo: '' }
 ];
