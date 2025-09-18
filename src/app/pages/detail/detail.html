@@ -6,8 +6,9 @@
     <div class="alert alert-danger">No se pudo cargar el personaje.</div>
   }
   @if (character(); as ch) {
-    <div class="row">
-      <div class="col-md-4">
+    <div class="row h-100 align-items-center justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 text-center hero-content">
+      <div class="col-md-8">
         <img [src]="ch.image" class="img-fluid rounded" [alt]="ch.name">
       </div>
       <div class="col-md-8">
@@ -20,9 +21,10 @@
           <li><strong>Ubicación:</strong> {{ ch.location.name }}</li>
           <li><strong>Episodios:</strong> {{ ch.episode.length }}</li>
         </ul>
-        <a routerLink="/" class="btn btn-secondary">
+        <a routerLink="/list" class="btn btn-secondary">
           <i class="bi bi-arrow-left"></i> Volver
         </a>
+      </div>
       </div>
     </div>
   }

@@ -1,9 +1,10 @@
 import { Component, inject, input } from '@angular/core';
 import { RickAndMortyService } from '../../services/rick-and-morty-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './detail.html',
   styleUrl: './detail.css'
 })

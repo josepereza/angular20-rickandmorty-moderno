@@ -1,0 +1,21 @@
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6 text-center hero-content">
+        <h1 class="display-3 fw-bold mb-4 animate-fade-in">
+          {{ titulo }}
+        </h1>
+        <p class="lead mb-5 animate-fade-in-delay">
+          {{ subtitulo }}
+        </p>
+        <button 
+          class="btn btn-primary btn-lg px-5 py-3 animate-fade-in-delay-2"
+          [routerLink]="['/list']">
+          {{ textoBoton }}
+          <i class="bi bi-rocket-takeoff ms-2"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
