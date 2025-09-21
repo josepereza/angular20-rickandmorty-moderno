@@ -1,11 +1,11 @@
 <div class="container py-4">
-  @if (loading()) {
+  @if (character.isLoading()) {
     <div class="text-center"><span class="spinner-border"></span></div>
   }
-  @if (error()) {
+  @if (character.error()) {
     <div class="alert alert-danger">No se pudo cargar el personaje.</div>
   }
-  @if (character(); as ch) {
+  @if (character.value(); as ch) {
     <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 col-md-8 col-lg-6 text-center hero-content">
       <div class="col-md-8">

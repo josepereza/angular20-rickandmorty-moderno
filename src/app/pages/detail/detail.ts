@@ -14,9 +14,8 @@ export default class Detail {
   /* Signal-based Input (Angular 18+) */
   id = input.required<number>();
 
-  character  = this.api.character;
-  loading    = this.api.charLoading;
-  error      = this.api.charError;
+  character  = this.api.characterRs();
+  
 
   ngOnInit(): void {
     // cada vez que el input cambie, pedimos el personaje

@@ -19,19 +19,14 @@ export class RickAndMortyService {
     () => `https://rickandmortyapi.com/api/character/?page=1&name=${this.nameFilter()}`
   )
   }
-
-  readonly characterResource = httpResource<Character>(
+  characterRs(){
+    return httpResource<Character>(
     () => `https://rickandmortyapi.com/api/character/${this.charId()}`
-  );
+  )
+  }
+  
 
-  /* ---------- helpers rápidos ---------- */
-  readonly character  = computed(() => this.characterResource.value()); // ← si existe
-
- 
-
-  readonly charLoading= this.characterResource.isLoading;
-  readonly charError  = this.characterResource.error;
-
+  
   /* ---------- acciones ---------- */
   search(name: string): void {
     this.nameFilter.set(name);
